@@ -1,0 +1,83 @@
+body {
+	font-family: 'Karla';
+	background: #edeae5;
+	width: 100%;
+	height: 100%;
+	position: relative;
+	margin: 0px;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: rgba(0,0,0,0.5);
+    font-style: italic;
+    transition: 0.4s;
+}
+
+a:hover {
+    color: rgba(0, 0, 0, 0.7);
+}
+
+div {
+	transition: linear 0.2s;
+}
+
+#container {
+    width: 480px;
+    height: 480px;
+    position: absolute;
+    top: calc(50% - 240px);
+    left: calc(50% - 240px);
+}
+.circle {
+    width: 60px;
+    height: 60px;
+    background: white;
+    display: inline-block;
+    margin-right: 30px;
+    border-radius: 50%;
+}
+.square {
+    width: 60px;
+    height: 60px;
+    /* Select all squares and make their background orange. */
+    background: #e67e22;
+    display: inline-block;
+    margin-right: 30px;
+}
+.row {
+    margin-bottom: 30px;
+}
+.green {
+    background: #78c272;
+}
+.fancy {
+    border: 3px inset rgba(74, 74, 74, 0.25);
+    width: 54px;
+    height: 54px;
+}
+/* Select all circles in the third row and make them red. */
+#third-row .circle {
+    background: #de6868;
+}
+/* Select all fancy circles and make their borders dotted. */
+.circle.fancy{
+    border-style: dotted;
+}
+/* Select all circles in the first column and make them disappear. */
+.circle:first-child {
+    opacity: 0
+}
+/* Select all shapes that are either green, fancy, or both and make them blue. */
+.green, .fancy {
+    background: #6392c0;
+}
+/* Select all circles and make them go faint when you hover over them. */
+.circle:hover {
+    opacity: 0.5;
+}
+/* Select all circles in the second row and make them bigger when you hover over them. */
+#second-row .circle:hover {
+    transform: scale(1.25);
+}
