@@ -1,0 +1,86 @@
+#homepage, #menu{
+    background-color: #FFFEEA;
+}
+#navbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-top: 30px;
+}
+.order-button:hover{
+    opacity: 80%;
+}
+.navbar-item{
+    font-family: 'Imprima';
+    font-style: normal;
+    font-size: 30px;
+    color:#000000;
+    text-decoration: none;
+}
+.navbar-item:hover{
+    cursor:pointer;
+    text-shadow: 2px 2px #9e9c98;
+}
+img {
+    max-width:100%;
+    max-height:100%;
+}
+.bg{
+    opacity: 70%; 
+    max-width:100%;
+    max-height:100%;
+}
+.mascot{
+    position: absolute;
+    top: 80%;
+    left: 5%;
+}
+#homepage_content{
+    margin: 30px;
+    display: flex;
+}
+h1{
+    font-family: 'Imprima';
+    font-style: normal;
+    font-weight: 450;
+    font-size: 84px;
+    color:#FFFFFF;
+    position: absolute;
+    top: 60%;
+    left: 30%;
+    transform: translate(-20%, -5%);
+}
+#menu_content{
+    margin: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.row{
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.hotdog{
+    object-fit: cover;
+    height: 200px; 
+    width: 300px;
+}
+.description{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 60px;
+    margin-right: 60px;
+    margin-top: 20px;
+    font-family: 'Imprima';
+    font-size: 24px;
+}
