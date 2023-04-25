@@ -1,0 +1,205 @@
+body {
+    background-color: #F1E7DD;
+}
+.nav{
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    font-family: 'Lemon';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    height: 60px;
+    padding: 0 1rem;
+}
+.nav--button {
+    padding: 0.5rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    color: #85695D;
+    cursor: pointer;
+}
+
+#nav--button--home {
+    margin-left: 2rem;
+}
+#nav--button--home:hover {
+    opacity: 80%;
+}
+
+#nav--button--fav {
+    margin-left: 2rem;
+}
+#nav--button--fav:hover {
+    opacity: 80%;
+}
+
+#nav--button--pick {
+    margin-left: 2rem;
+}
+#nav--button--pick:hover {
+    opacity: 80%;
+}
+
+#home {
+    background-image: url("assets/img/boba_home.JPG");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+
+#fav{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.fav--title {
+    color: #85695D;
+    font-family: 'Lemon';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 64px;
+}
+
+.fav--description {
+    color: #DDB892;
+    font-family: 'Lemon';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+}
+
+.boba {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+#boba-name {
+    font-family: 'Lemon';
+    font-style: normal;
+    color: #85695D;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+#boba-store {
+    font-family: 'Lemon';
+    font-style: normal;
+    color: #DDB892;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.boba_column1, .boba_column2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    flex-basis: 50%;
+  }
+
+#boba1, #boba2, #boba3, #boba4, #boba5, #boba6 {
+    width: 200px; 
+    height: 200px;
+    overflow: hidden; 
+    border-radius: 55px;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+#boba1:hover, #boba2:hover, #boba3:hover, #boba4:hover, #boba5:hover, #boba6:hover {
+    opacity: 80%;
+}
+
+img {
+    display: block; 
+    width: 100%; 
+    height: auto; 
+  }
+
+.hidden {
+    display: none;
+}
+/*#bobabox-overlay {
+    position: absolute;
+    top: 50;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+*/
+.bobabox {
+    position: absolute;
+    top: 1500px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 800px;
+}
+.bobabox img {
+    width: 100%;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+}
+.bobabox .caption {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 20px;
+    background: white;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+.caption {
+    font-size: 24px;
+}
+
+/* Not using this part in final project for now. 
+.wheel-title {
+    color: #85695D;
+    font-family: 'Lemon';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 64px;
+}
+
+.main-wheel{
+    position: relative;
+    width: 500px;
+    height: 500px;
+  }
+  .main-wheel:after{
+    position: absolute;
+    content: '';
+    width: 32px;
+    height: 32px;
+    background: url('assets/img/arrow.png') no-repeat;
+    background-size: 32px;
+    right: -30px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .wheel{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    font-weight: bold;
+    border-radius: 50%;
+    border: 10px solid #fff;
+    overflow: hidden;
+    transition: all ease 5s;
+  }
+  */

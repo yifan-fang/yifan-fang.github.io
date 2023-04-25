@@ -1,6 +1,178 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>My FAV BOBA!</title>
+        <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lemon">
+        <script type="text/javascript" src="assets/js/script.js"></script>
+    </head>
     <body>
-        FINAL
+        <div class="nav">
+            <div class="logo">
+                <img id="logo" src="assets/img/logo.png" alt="Logo" style="width: 80%;">
+            </div>
+            <div class="nav--button"> 
+                <div id="nav--button--home">
+                    <a href="#home" id="nav--button--home" style="text-decoration: none; color: #85695D;">
+                        Home
+                    </a>
+                </div>
+                <div id="nav--button--fav">
+                    <a href="#fav" id="nav--button--fav" style="text-decoration: none; color: #85695D;">
+                    My favs
+                    </a>
+                </div>
+                <!--
+                <div id="nav--button--pick">
+                    Picked for U!
+                </div>
+                -->
+            </div>
+        </div>
+        <div id="home">
+            <div class="home--pic">
+                <img id="home-boba" src="assets/img/boba_home.jpg" alt="Boba" style="width: 100%;">
+            </div>
+        </div>
+        <div id="fav">
+            <div class="fav--title">
+                My favorites!
+            </div>
+            <div class="fav--description">
+                (from stores in Bay Area & China)
+            </div>
+            <div class="boba">
+                <div class="boba_column1">
+                    <div class="fav--boba1">
+                        <img id="boba1" src="assets/img/cyys.JPG" alt="You Lan Latte">
+                        <div id="boba-name">
+                            You Lan Latte
+                        </div>
+                        <div id="boba-store">
+                            @Cha Yan Yue Se
+                        </div>
+                    </div>
+                    <div class="fav--boba2">
+                        <img id="boba2" src="assets/img/cbd.JPG" alt="Oolong Soy Milk with Mochi">
+                        <div id="boba-name">
+                            Oolong Soy Milk with Mochi
+                        </div>
+                        <div id="boba-store">
+                            @Chabaidao
+                        </div>
+                    </div>
+                    <div class="fav--boba3">
+                        <img id="boba3" src="assets/img/pinkpink.JPG" alt="Peach Oolong Milk Tea">
+                        <div id="boba-name">
+                            Peach Oolong Milk Tea
+                        </div>
+                        <div id="boba-store">
+                            @Pink Pink Tea Shoppe
+                        </div>
+                    </div>
+                </div>
+                <div class="boba_column2">
+                    <div class="fav--boba4">
+                        <img id="boba4" src="assets/img/cbd2.JPG" alt="Mango Pomelo Sago">
+                        <div id="boba-name">
+                            Mango Pomelo Sago
+                        </div>
+                        <div id="boba-store">
+                            @Chabaidao
+                        </div>
+                    </div>
+                    <div class="fav--boba5">
+                        <img id="boba5" src="assets/img/nxdc.JPG" alt="Strawberry Cloud FruiTEA">
+                        <div id="boba-name">
+                            Strawberry Cloud FruiTEA
+                        </div>
+                        <div id="boba-store">
+                            @Nayuki
+                        </div>
+                    </div>
+                    <div class="fav--boba6">
+                        <img id="boba6" src="assets/img/yifang.JPG" alt="Fresh Taro Latte">
+                        <div id="boba-name">
+                            Fresh Taro Latte
+                        </div>
+                        <div id="boba-store">
+                            @Yifang
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="bobabox-overlay" class="hidden"></div>
+            <div class="bobabox hidden" id="boba-pic1">
+                <img src="assets/images/boba1.jpg" alt="">
+                <div class="caption">
+                    Ceylon black tea, whole milk, pecons, whipping cream
+                </div>
+            </div>
+            <div class="bobabox hidden" id="boba-pic2">
+                <img src="assets/images/boba2.jpg" alt="">
+                <div class="caption">
+                    Oolong tea, soy milk, mochi, soybean powder
+                </div>
+            </div>
+            <div class="bobabox hidden" id="boba-pic3">
+                <img src="assets/images/boba3.jpg" alt="">
+                <div class="caption">
+                    Oolong tea, whole milk, peach, salted cream foam
+                </div>
+            </div>
+            <div class="bobabox hidden" id="boba-pic4">
+                <img src="assets/images/boba4.jpg" alt="">
+                <div class="caption">
+                    Mango, coconut milk, grapefruit, sago
+                </div>
+            </div>
+            <div class="bobabox hidden" id="boba-pic5">
+                <img src="assets/images/boba5.jpg" alt="">
+                <div class="caption">
+                    Strawberry shake, salted cream foam
+                </div>
+            </div>
+            <div class="bobabox hidden" id="boba-pic6">
+                <img src="assets/images/boba6.jpg" alt="">
+                <div class="caption">
+                    Whole milk, taro
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="assets/js/script.js"></script>
+    <!-- 
+        Not using this part in final project for now. 
+        <div class="main-wheel">
+            <div class="wheel-title">
+                Not sure which one? Spin the wheel!
+            </div>
+            <div id="wheel" class="wheel">
+                <div class="wheel1">
+                    <span class="span1">
+                        <b>You Lan Latte<br>@Cha Yan Yue Se</b>
+                    </span>
+                    <span class="span2">
+                        <b>Oolong Soy Milk with Mochi<br>@Chabaidao</b>
+                    </span>
+                    <span class="span2">
+                        <b>Peach Oolong Milk Tea<br>@Pink Pink Tea Shoppe</b>
+                    </span>
+                </div>
+                <div class="wheel2">
+                    <span class="span1">
+                        <b>Mango Pomelo Sago<br>@Chabaidao</b>
+                    </span>
+                    <span class="span2">
+                        <b>Fresh Strawberry Cloud FruiTEA<br>@Nayuki</b>
+                    </span>
+                    <span class="span2">
+                        <b>Fresh Taro Latte<br>@Yifang</b>
+                    </span>
+                </div>
+            </div>
+            <button class="spin" onclick="rotateFunction()">SPIN!</button>
+        </div>
+    -->
     </body>
 </html>
