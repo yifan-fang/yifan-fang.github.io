@@ -1,43 +1,298 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <link rel = "stylesheet" href = "https://fonts.googleapis.com/css?family=Karla">
-        <link rel = "stylesheet" href = "DONOTTOUCH/css/main-page.css">
-    </head>
-    <body>
-        <div id = "overall-container">
-            <div class = "home-page-folder">
-                <h1>
-                    Homeworks
-                </h1>
-                <a href = "homeworks/index.html">
-                    <img src = "DONOTTOUCH/images/folder.png">
-                </a>
-            </div>
-            <div class = "home-page-folder">
-                <h1>
-                    Labs
-                </h1>
-                <a href = "labs/index.html">
-                    <img src = "DONOTTOUCH/images/folder.png">
-                </a>
-            </div>
-            <div class = "home-page-folder">
-                <h1>
-                    Midterm
-                </h1>
-                <a href = "midterm/index.html">
-                    <img src = "DONOTTOUCH/images/folder.png">
-                </a>
-            </div>
-            <div class = "home-page-folder">
-                <h1>
-                    Final
-                </h1>
-                <a href = "final/index.html">
-                    <img src = "DONOTTOUCH/images/folder.png">
-                </a>
-            </div>
-        </div>
-    </body>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Yifan Fang — vision and attention research</title>
+<meta name="description" content="Yifan Fang, PhD candidate in Psychology at Dartmouth College, studying visual attention with EEG and psychophysics.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,300&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#edeff1;
+    --panel:#f7f8f9;
+    --ink:#14181d;
+    --muted:#5c6672;
+    --rule:#d2d7dc;
+    --accent:#2b3fbf;
+    --measure:64ch;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --paper:#14181d;
+      --panel:#1a1f26;
+      --ink:#e7eaed;
+      --muted:#98a2ae;
+      --rule:#2c333c;
+      --accent:#95a6ff;
+    }
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:"Newsreader",Georgia,serif;
+    font-size:1.0625rem;
+    line-height:1.65;
+    font-weight:400;
+  }
+  .wrap{max-width:46rem;margin:0 auto;padding:0 1.5rem 6rem}
+
+  /* ---------- nav ---------- */
+  nav{
+    font-family:"Inter",system-ui,sans-serif;
+    font-size:.8125rem;
+    padding:1.75rem 0 0;
+    display:flex;
+    gap:1.5rem;
+    flex-wrap:wrap;
+  }
+  nav a{color:var(--muted);text-decoration:none}
+  nav a:hover{color:var(--accent);text-decoration:underline;text-underline-offset:3px}
+
+  /* ---------- hero ---------- */
+  header.hero{
+    padding:3.5rem 0 2.75rem;
+    display:grid;
+    grid-template-columns:1fr auto;
+    gap:2.5rem;
+    align-items:start;
+  }
+  h1{
+    font-weight:300;
+    font-size:clamp(2.5rem,7vw,3.75rem);
+    line-height:1.02;
+    letter-spacing:-.02em;
+    margin:0 0 1rem;
+  }
+  .standfirst{
+    font-size:1.1875rem;
+    max-width:32ch;
+    margin:0 0 1.25rem;
+  }
+  .affil{
+    font-family:"Inter",system-ui,sans-serif;
+    font-size:.875rem;
+    line-height:1.6;
+    color:var(--muted);
+    margin:0;
+  }
+  .array{width:150px;height:auto;opacity:.9}
+  .array line{stroke:var(--muted);stroke-width:2.5;stroke-linecap:round}
+  .array line.odd{stroke:var(--accent);stroke-width:3}
+  @media (max-width:44rem){
+    header.hero{grid-template-columns:1fr;gap:1.75rem;padding-top:2.5rem}
+    .array{width:120px}
+  }
+
+  /* ---------- sections ---------- */
+  section{padding-top:3rem}
+  h2{
+    font-family:"Inter",system-ui,sans-serif;
+    font-size:.8125rem;
+    font-weight:600;
+    letter-spacing:.01em;
+    color:var(--muted);
+    margin:0 0 .25rem;
+    padding-bottom:.6rem;
+    border-bottom:1px solid var(--rule);
+  }
+  p{max-width:var(--measure)}
+  a{color:var(--accent)}
+  a:focus-visible,nav a:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:2px}
+
+  /* ---------- entries ---------- */
+  .entry{padding:1.75rem 0;border-bottom:1px solid var(--rule)}
+  .entry:last-child{border-bottom:0}
+  .entry h3{
+    font-size:1.25rem;
+    font-weight:500;
+    line-height:1.3;
+    margin:0 0 .35rem;
+    max-width:var(--measure);
+  }
+  .byline{
+    font-family:"Inter",system-ui,sans-serif;
+    font-size:.8125rem;
+    color:var(--muted);
+    margin:0 0 .6rem;
+  }
+  .entry p{margin:0 0 .6rem}
+  .entry p:last-child{margin-bottom:0}
+  .note{font-size:.9375rem;color:var(--muted)}
+  .status{
+    display:inline-block;
+    font-family:"Inter",system-ui,sans-serif;
+    font-size:.6875rem;
+    font-weight:500;
+    letter-spacing:.02em;
+    color:var(--muted);
+    border:1px solid var(--rule);
+    border-radius:2px;
+    padding:.15rem .45rem;
+    margin-bottom:.7rem;
+  }
+  .status.out{color:var(--accent);border-color:var(--accent)}
+
+  /* ---------- methods + contact ---------- */
+  .methods{
+    list-style:none;
+    margin:1.25rem 0 0;
+    padding:0;
+    max-width:var(--measure);
+  }
+  .methods li{
+    display:flex;
+    gap:1rem;
+    padding:.6rem 0;
+    border-bottom:1px solid var(--rule);
+    font-size:1rem;
+  }
+  .methods li:last-child{border-bottom:0}
+  .methods span:first-child{
+    font-family:"Inter",system-ui,sans-serif;
+    font-size:.8125rem;
+    color:var(--muted);
+    flex:0 0 9.5rem;
+    padding-top:.15rem;
+  }
+  @media (max-width:34rem){
+    .methods li{flex-direction:column;gap:.15rem}
+    .methods span:first-child{flex:none}
+  }
+  footer{
+    padding-top:3rem;
+    font-family:"Inter",system-ui,sans-serif;
+    font-size:.8125rem;
+    color:var(--muted);
+  }
+  footer a{word-break:break-word}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<nav>
+  <a href="#papers">Papers</a>
+  <a href="#projects">Projects in progress</a>
+  <a href="#methods">Methods</a>
+  <a href="#contact">Contact</a>
+  <!-- TODO: add your CV once cv.pdf is in the repo -->
+  <a href="cv.pdf">CV</a>
+</nav>
+
+<header class="hero">
+  <div>
+    <h1>Yifan Fang</h1>
+    <p class="standfirst">I study how attention decides what we see, and what the brain does a fraction of a second after it chooses.</p>
+    <p class="affil">
+      PhD candidate in Psychology, Dartmouth College<br>
+      Advised by Viola Störmer and David Whitney<br>
+      B.A. Data Science and Cognitive Science, UC Berkeley
+    </p>
+  </div>
+  <svg class="array" viewBox="0 0 240 130" role="img" aria-label="A search array of tilted line segments with one oddball at a different orientation.">
+    <line x1="9.7" y1="21.2" x2="30.3" y2="28.8"/>
+    <line x1="59.7" y1="21.2" x2="80.3" y2="28.8"/>
+    <line x1="109.7" y1="21.2" x2="130.3" y2="28.8"/>
+    <line x1="159.7" y1="21.2" x2="180.3" y2="28.8"/>
+    <line x1="209.7" y1="21.2" x2="230.3" y2="28.8"/>
+    <line x1="9.7" y1="61.2" x2="30.3" y2="68.8"/>
+    <line x1="59.7" y1="61.2" x2="80.3" y2="68.8"/>
+    <line class="odd" x1="123.8" y1="54.7" x2="116.2" y2="75.3"/>
+    <line x1="159.7" y1="61.2" x2="180.3" y2="68.8"/>
+    <line x1="209.7" y1="61.2" x2="230.3" y2="68.8"/>
+    <line x1="9.7" y1="101.2" x2="30.3" y2="108.8"/>
+    <line x1="59.7" y1="101.2" x2="80.3" y2="108.8"/>
+    <line x1="109.7" y1="101.2" x2="130.3" y2="108.8"/>
+    <line x1="159.7" y1="101.2" x2="180.3" y2="108.8"/>
+    <line x1="209.7" y1="101.2" x2="230.3" y2="108.8"/>
+  </svg>
+</header>
+
+<section id="papers">
+  <h2>Papers</h2>
+
+  <div class="entry">
+    <span class="status out">Published</span>
+    <h3>Efficient coding in motor planning</h3>
+    <p class="byline">Wang, Y., Fang, Y., &amp; Whitney, D. (2025). <em>Science Advances</em>.</p>
+    <!-- TODO: replace with the exact published title and add the DOI link -->
+    <p class="note">Add a one-line summary of the finding here, plus a link to the paper.</p>
+  </div>
+
+  <div class="entry">
+    <span class="status out">In press</span>
+    <h3>Attentional selection and face perception</h3>
+    <!-- TODO: replace with the real title, journal, and author list -->
+    <p class="note">First-author paper, in press. Add the title, journal, and a one-line summary.</p>
+  </div>
+
+  <div class="entry">
+    <span class="status">Under review</span>
+    <h3>Trustworthiness perception in the absence of any persons</h3>
+    <p class="byline">With Necdet Gurkan, Jefferson Ortega, and Jordan Suchow.</p>
+    <!-- TODO: confirm the full author list and order, and link the PsyArXiv preprint when it is up -->
+    <p>People read trustworthiness from scenes that contain no one at all. Add a sentence or two on the paradigm and the result here.</p>
+  </div>
+
+  <div class="entry">
+    <span class="status">In preparation</span>
+    <h3>Statistical learning and visual search: early selection or later evaluation?</h3>
+    <p>When some objects appear as targets far more often than others, does the learned regularity change how quickly attention is captured, or what happens after it lands? Across a learning phase and a test phase with frequent and infrequent target objects, the N2pc showed no reliable difference between conditions, while the LPC did.</p>
+    <p class="note">Analyses include fractional-area N2pc latency with jackknife estimation, split-half reliability, Bayes factors supporting the null selection effect, and single-subject correlations between latency, LPC amplitude, and response time.</p>
+  </div>
+</section>
+
+<section id="projects">
+  <h2>Projects in progress</h2>
+
+  <div class="entry">
+    <h3>Hearing a fight, seeing a game</h3>
+    <p>Two figures approach each other and you have to say whether they are fighting or playing. The sound that comes with the motion shifts the answer: pitch is manipulated above, at, or below its veridical value, crossed with how fast the figures charge. Analyses use mixed-effects models in R alongside polynomial trend contrasts.</p>
+    <p class="note">A preregistered replication doubles the sample and uses a Bayesian sequential stopping rule to test whether the effect is asymmetric across higher- and lower-pitch sounds.</p>
+  </div>
+
+  <div class="entry">
+    <h3>Two-body inversion, without the body</h3>
+    <p>Pairs of people facing each other are harder to recognize upside down than pairs facing away, an effect taken as evidence that the visual system groups interacting bodies. With silhouette stimuli, this facing-selective inversion effect did not replicate. The working interpretation is a boundary condition on stimulus information: silhouettes preserve the outline but remove the internal cues that make a body readable as a body.</p>
+  </div>
+
+  <div class="entry">
+    <h3>Do concepts guide the eyes?</h3>
+    <p>Visual search is guided by features like color and shape. This experiment asks whether conceptual properties of objects can guide it too, using triplets of objects that share meaning without sharing appearance.</p>
+  </div>
+</section>
+
+<section id="methods">
+  <h2>Methods</h2>
+  <p>My work sits between EEG and psychophysics, and most of my time goes into the analysis side of both.</p>
+  <ul class="methods">
+    <li><span>EEG and ERP</span><span>MATLAB pipelines with EEGLAB and ERPLAB: artifact rejection, component amplitude and latency measures, reliability estimation, topographies</span></li>
+    <li><span>Psychophysics</span><span>Two-alternative forced choice designs, audiovisual and body-perception stimuli, replication and preregistration</span></li>
+    <li><span>Statistics</span><span>Mixed-effects models in R (lme4), repeated-measures and trend-contrast ANOVA in Python (pingouin), Bayes factors, Bayesian sequential designs, power analysis</span></li>
+    <li><span>Decoding</span><span>SVM classification of neural signals with scikit-learn</span></li>
+  </ul>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <!-- TODO: fill in your real email and any profile links you want -->
+  <p>Email is the best way to reach me: <a href="mailto:yifan.fang.gr@dartmouth.edu">yifan.fang.gr@dartmouth.edu</a>. I am glad to hear from anyone interested in the work, and happy to share stimuli, code, or data.</p>
+  <p class="note">
+    <a href="https://github.com/yifan-fang">GitHub</a> &nbsp;
+    <a href="#">Google Scholar</a> &nbsp;
+    <a href="#">OSF</a>
+  </p>
+</section>
+
+<footer>
+  Last updated September 2026.
+</footer>
+
+</div>
+</body>
 </html>
